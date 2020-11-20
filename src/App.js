@@ -4,6 +4,7 @@ import Axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import Recipe from "./components/Recipe";
 import Alert from "./components/Alert";
+import "math";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -54,7 +55,7 @@ function App() {
       </form>
       <div className="recipes">
         {recipes !== [] &&
-          recipes.map(recipe => <Recipe key={uuidv4()} recipe={recipe} />)}
+          recipes.map(recipe => <Recipe key={Math.random()} recipe={recipe} />)}
       </div>
     </div>
   );
