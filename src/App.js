@@ -53,7 +53,8 @@ const App = () => {
       </form>
       <div className="recipes">
         {recipes !== [] &&
-          recipes.map(recipe => <Recipe key={uuidv4()} recette={recipe} />)}
+          recipes.map(recipe => <Recipe key={uuidv4()} recette={recipe} />)
+        }
       </div>
     </div>
   );
